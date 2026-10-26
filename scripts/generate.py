@@ -253,7 +253,7 @@ def generate_genesis(output="./genesis.json"):
 def mainnet():
     global network, chain_id, hex_chain_id
     network = "mainnet"
-    chain_id = 56
+    chain_id = 618
     hex_chain_id = convert_chain_id(chain_id)
 
     # mainnet init data
@@ -308,7 +308,7 @@ def mainnet():
 def testnet():
     global network, chain_id, hex_chain_id
     network = "testnet"
-    chain_id = 97
+    chain_id = 617
     hex_chain_id = convert_chain_id(chain_id)
 
     # testnet init data
@@ -355,7 +355,7 @@ def testnet():
     generate_timelock(init_minimal_delay)
     generate_token_hub(lock_period_for_token_recover)
 
-    generate_genesis("./genesis-testnet.json")
+    generate_genesis_test("./genesis-testnet.json")
     print("Generate genesis of testnet successfully")
 
 
